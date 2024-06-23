@@ -1,0 +1,83 @@
+body {
+  background: linear-gradient(to right, #1488cc, #2b32b2);
+  padding-top: 50px;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 400px;
+}
+
+.form-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+h2.text-center text-primary mb-4{
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff; /* Changed to the specified color */
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #8e7ffe; /* Changed to the specified color */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #8e7ffe;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border-radius: 20px;
+  color: #8e7ffe; /* Changed to the specified color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+  color: #8e7ffe; /* Ensure hover text color remains the same */
+}
+
+.btn-secondary, .btn-success {
+  border-radius: 20px;
+  color: #fff; /* Default white text */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #6c757d;
+  border-color: #545b62;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}

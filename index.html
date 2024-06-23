@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Wish Sender</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="card mt-5 form-card shadow-lg">
+    <div class="card-body">
+      <h2 class="text-center text-primary mb-4">Send a Birthday Wish</h2>
+      <form id="wishForm">
+        <div class="form-group">
+          <input type="text" class="form-control" id="yourName" name="yourName" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="friendName" name="friendName" placeholder="Friend's Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="yourEmail" name="yourEmail" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="friendEmail" name="friendEmail" placeholder="Friend's Email" required>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" onclick="previewMessage()">Preview</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="previewSection" class="card mt-5 form-card shadow-lg" style="display: none;">
+    <div class="card-body">
+      <h2 class="text-center text-primary mb-4">Preview Your Message</h2>
+      <div class="form-group">
+        <input type="text" class="form-control" id="previewYourName" readonly>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="previewFriendName" readonly>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="previewYourEmail" readonly>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="previewFriendEmail" readonly>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" id="previewMessage" rows="4" readonly></textarea>
+      </div>
+      <button type="button" class="btn btn-secondary btn-block" onclick="editMessage()">Edit</button>
+      <button type="button" class="btn btn-success btn-block" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
